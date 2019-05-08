@@ -2,7 +2,7 @@
 #[allow(unused_assignments)]
 #[allow(dead_code)]
 fn main() {
-    // Basic enum
+    // basic enum
     enum Direction {
         Left,
         Right,
@@ -10,13 +10,13 @@ fn main() {
         Down,
     }
 
-    // Enum with field types
+    // enum with field types
     enum OptionalI32 {
         AnI32(i32),
         Nothing,
     }
 
-    // Enum with constant values
+    // enum with constant values
     enum DirectionWithValue {
         Left = 1,
         Right = 2,
@@ -24,10 +24,10 @@ fn main() {
         Down = 4,
     }
 
-    // Get enum value
+    // get enum value
     assert_eq!(DirectionWithValue::Left as u8, 1);
 
-    // Function that takes a `WebEvent` enum as an argument and
+    // function that takes a `WebEvent` enum as an argument and
     // returns a string representation of the event with details
     fn debug(event: WebEvent) -> String {
         match event {
@@ -39,7 +39,7 @@ fn main() {
         }
     }
 
-    // Awesome enum
+    // awesome enum
     enum WebEvent {
         PageLoad,
         PageUnload,
@@ -67,7 +67,7 @@ fn main() {
         Pupper
     }
 
-    // Do the same thing for different enum values using the `|` operator
+    // do the same thing for different enum values using the `|` operator
     let result = match DogKind::Doggy {
         DogKind::Doggo | DogKind::Doggy => "good doge",
         _ => "bad doge"

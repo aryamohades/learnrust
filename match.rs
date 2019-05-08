@@ -2,14 +2,14 @@
 #[allow(unused_assignments)]
 #[allow(dead_code)]
 fn main() {
-    // Basic pattern matching
+    // basic pattern matching
     let foo: Option<i32> = Some(1);
     match foo {
         Some(n) => println!("it’s an i32: {}", n),
         None => println!("it’s nothing!"),
     }
 
-    // Advanced pattern matching
+    // advanced pattern matching
     struct FooBar { x: i32, y: Option<i32> }
     let bar = FooBar { x: 15, y: Some(32) };
 
@@ -34,14 +34,14 @@ fn main() {
 
     let number = Number::Three;
 
-    // Use `_` to catch all unhandled cases
+    // use `_` to catch all unhandled cases
     match number {
         Number::One => println!("One!"),
         Number::Two => println!("Two!"),
         _ => println!("not One or Two")
     }
 
-    // If we only want to match on a single value, we can use `if let` instead to be more concise
+    // if matching only a single value, use `if let` (more concise)
     if let Number::Three = number {
         println!("Three!");
     }

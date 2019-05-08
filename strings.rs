@@ -2,13 +2,17 @@
 #[allow(unused_assignments)]
 #[allow(dead_code)]
 fn main() {
-    // Create a heap-allocated string
+    // create a heap-allocated string
     let s = String::from("hello");
 
-    // Create a string in a different way
+    // create a string in a different way
     let s = "hello".to_string();
 
-    // String literal
+    // create owned string from borrowed string
+    let s: &str = "hello";
+    let s_owned: String = s.to_owned();
+
+    // string literal
     let s = "hello";
 
     let mut s = String::from("hello");
@@ -24,12 +28,12 @@ fn main() {
     // slice - immutable view into a string
     let slice = &s;
 
-     // Iterate over string characters
+     // iterate over string characters
     for c in s.chars() { 
         // do something with `c`
     }
 
-    // Iterate over string characters with index
+    // iterate over string characters with index
     for (i, c) in s.chars().enumerate() {
         // do something with character `c` and index `i`
     }
@@ -42,7 +46,7 @@ fn main() {
         // do something with `b`
     }
 
-    // Function that returns a string slice representing first word in string
+    // function that returns a string slice representing first word in string
     fn first_word(s: &str) -> &str {
         let bytes = s.as_bytes();
 

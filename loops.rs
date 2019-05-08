@@ -20,7 +20,7 @@ fn main() {
         break
     }
 
-    // Infinite loop
+    // infinite loop
     loop {
         // do something
         // break out of loop
@@ -29,7 +29,7 @@ fn main() {
 
     let mut counter = 0;
 
-    // Break out of loop with an expression
+    // break out of loop with an expression
     let result = loop {
         counter += 1;
 
