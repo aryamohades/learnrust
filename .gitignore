@@ -5,3 +5,7 @@
 !*.md
 !/projects/
 !/projects/**
+!/folder_mod
+!/folder_mod/**
+!/nested_mod
+!/nested_mod/**
