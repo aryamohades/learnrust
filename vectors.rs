@@ -2,8 +2,32 @@
 #[allow(unused_variables)]
 #[allow(unused_assignments)]
 fn main() {
+    // create an immutable i32 array of size 3, initialized with zeroes
+    let arr: [i32; 3] = [0; 3];
+
     // create a fixed size array
     let arr = [1, 2, 3];
+
+    // iterate over an array
+    for i in arr.iter() {
+        // do something with `i`
+    }
+
+    // the array itself is not iterable
+    // does not compile
+    // for i in arr {}
+
+    // if the array if size 32 or less, you can iterate using the reference
+    for i in &arr {
+        // do something with `i`
+    }
+
+    // array of size 33 or more does not implement IntoIterator
+    // does not compile
+    // let arr = [0; 33];
+    // for i in &arr {
+    //     // do something with `i`
+    // }
 
     // access array element
     assert_eq!(arr[0], 1);
