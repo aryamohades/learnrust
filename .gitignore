@@ -9,3 +9,4 @@
 !/folder_mod/**
 !/nested_mod
 !/nested_mod/**
+/projects/**/target
