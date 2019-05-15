@@ -1,3 +1,5 @@
+// Note: iterators are one of Rust's zero-cost abstractions. Using them imposes no additional
+// runtime overhead (they get compiled to roughly the same code as writing the loop logic yourself)
 #[allow(unused_variables)]
 #[allow(unused_assignments)]
 #[allow(dead_code)]
